@@ -4,10 +4,8 @@ import java.util.Scanner;
 public class Linazeug {
 
     public static void main(String[] args) {
-		
-		//lkg();
-		eea();
-	
+		lkg();
+		//eea();
     }
 	
 	/* Erweiterter Euklidischer Algorithmus: 
@@ -24,6 +22,7 @@ public class Linazeug {
 		System.out.print("Bitte r1 eingeben: ");
 		int r_1 = scan.nextInt();
 		
+		// nicht zwingend, aber praktischer beim Ermitteln des ggT, wenn erste Zahl > zweite Zahl
 		if (r_2 < r_1) {
 			int temp1 = r_2;
 			r_2 = r_1;
@@ -40,7 +39,8 @@ public class Linazeug {
 			System.out.println("r" + counter + " = " + r_2 + " mod " + r_1 + " = " + r_now);
 			if (r_now == 0) {
 				System.out.println("Abbruch!");
-				break;}
+				break;
+			}
 			q = r_2 / r_1;
 			System.out.println("q" + counter + " = " + r_2 + " div " + r_1 + " = " + q);
 			x_now = x_2 - q * x_1;
@@ -56,7 +56,6 @@ public class Linazeug {
 			y_1 = y_now;
 			
 			counter++;
-			
 			}
 			System.out.println("Ergebnisse: x = " + x_now + ", y = " + y_now + ", ggT: " + r_1);
 	
